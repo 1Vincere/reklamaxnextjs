@@ -17,8 +17,7 @@ export default function Rocket() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
-  //
+  }, [handleScroll]); // Добавлен handleScroll в массив зависимостей
 
   const [rotationAngle, setRotationAngle] = useState(0);
 
