@@ -1,0 +1,114 @@
+/* #46c2a0; */
+
+.about {
+    width: 100%;
+    position: relative;
+}
+
+.h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: white;
+    text-align: center;
+    margin: 50px 0px 100px 0px;
+    text-shadow: 0 0 2px #ffffff;
+}
+
+.p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: white;
+    text-align: center;
+    margin: 50px 0px 100px 0px;
+    text-shadow: 0 0 2px #ffffff;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.block1,.block2,.block3,.block4,.block5 {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: #000000;
+    border: 1px solid #fff;
+    box-shadow: 0 0 2px #ffffff;
+    transition-delay: 1s;
+}
+.block5:hover {
+    border: 1px solid #46c2a0;
+    box-shadow: 0 0 2px #46c2a0;
+}
+
+.line {
+    content: "";
+    width: 0px;
+    height: 1px;
+    background-color: #46c2a0;
+    box-shadow: 0 0 2px #46c2a0;
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    z-index: -1;
+    transition: width 1.8s ease;
+}
+
+.info:hover .line {
+    width: 1200px;
+}
+
+.info:hover .block5 {
+    transform: scale(0.95);
+    border: 1px solid #46c2a0;
+    box-shadow: 0 0 2px #46c2a0;
+}
+
+.p {
+    color: white;
+    padding: 10px;
+}
+
+/* Btn */
+
+.test{
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    text-align: center;
+    width: 200px;
+    display: inline-block;
+    height: 48px;
+    padding: 12px 28px;
+    margin-bottom: 200px;
+    border-radius: 10px;
+    background-color: #000;
+    color: #fff;
+    letter-spacing: 0.15px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid #fff;
+    box-shadow: 0 0 2px #ffffff;
+    text-shadow: 0 0 2px #ffffff;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+  
+.btn:hover {
+    transform: scale(0.95);
+    color: #46c2a0;
+    border: 1px solid #46c2a0;
+    box-shadow: 0 0 2px #46c2a0;
+    text-shadow: 0 0 2px #46c2a0;
+}
+  
+.btn:active {
+    position: relative;
+    bottom: -2px;
+}
