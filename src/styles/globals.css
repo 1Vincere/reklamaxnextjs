@@ -9,7 +9,7 @@ body {
   cursor: default;
   background-color: inherit;
   overflow-x: hidden;
-  /* background-color: black; */
+  background-color: black;
 }
 
 body::-webkit-scrollbar {

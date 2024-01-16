@@ -12,15 +12,9 @@ function Footer() {
             <div className={styles.flex}>
                 <div className={styles.gif}></div>
                 <div className={styles.links}>
-                    <Link href="/" passHref legacyBehavior>
-                        <a className={styles.link}> Головна </a>
-                    </Link>
-                    <Link href="/Projects/Projects" passHref legacyBehavior>
-                        <a className={styles.link}> Проекти </a>
-                    </Link>
-                    <Link href="/Create/Create" passHref legacyBehavior>
-                        <a className={styles.link}> Створити </a>
-                    </Link>
+                    <Link href="/" className={styles.link}>Головна</Link>
+                    <Link href="/products" className={styles.link}>Проекти</Link>
+                    <Link href="/news" className={styles.link}>Створити</Link>
                 </div>
             </div>
             <div className={styles.flex2}>
