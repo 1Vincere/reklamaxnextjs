@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Play';
+  src: url('/fonts/Play-Regular.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'PlayBold';
+  src: url('/fonts/Play-Bold.ttf') format('ttf');
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -10,6 +20,8 @@ body {
   background-color: inherit;
   overflow-x: hidden;
   background-color: black;
+  font-family: 'Play', sans-serif;
+  letter-spacing: 1px;
 }
 
 body::-webkit-scrollbar {
