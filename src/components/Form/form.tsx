@@ -402,7 +402,51 @@ export default function Form() {
                 TEST3TEST3
               </p>
             </div>
-
+            <h2 className={styles.infoH2}>Вкажіть сайти, які вам подобаються і ті, які вам не подобаються. Ця інформація стане гарним інструментом для створення дизайну</h2>
+            <div className={styles.inputs}>
+              <div className={styles.inputsblock}>
+                <label
+                    htmlFor='goals'
+                    className={styles.label}
+                  >
+                    Подобаються
+                </label>
+                    <input
+                      type='text'
+                      id='like'
+                      {...register('like')}
+                      autoComplete='like'
+                      placeholder='http://exampl.com.ua/'
+                      className={styles.input}
+                    />
+                    {errors.like?.message && (
+                      <p className={styles.errors}>
+                        {errors.like.message}
+                      </p>
+                    )}
+              </div>
+              <div className={styles.inputsblock}>
+                <label
+                    htmlFor='goals'
+                    className={styles.label}
+                  >
+                    Не подобаються
+                </label>
+                    <input
+                      type='text'
+                      id='notLike'
+                      {...register('notLike')}
+                      autoComplete='notLike'
+                      placeholder='http://exampl.com.ua/'
+                      className={styles.input}
+                    />
+                    {errors.notLike?.message && (
+                      <p className={styles.errors}>
+                        {errors.notLike.message}
+                      </p>
+                    )}
+              </div>
+            </div>
             <div className={styles.inputs}>
               <div className={styles.inputsblock}>
                 <label
@@ -419,9 +463,7 @@ export default function Form() {
                         value="yes"
                         {...register('answer')}
                         className={`${styles.inputradio} ${selectedOption === 'yes' ? styles.inputradioActive : ''}`}
-                        onChange={() => handleRadioChange('yes')}
                         onClick={() => handleRadioChange('yes')}
-                        onTouchStart={() => handleRadioChange('yes')}
                         autoComplete='yesRadio'
                       />
                       <label htmlFor="yesRadio" className={styles.radiolabel}>Так</label>
@@ -499,51 +541,6 @@ export default function Form() {
               </div>
               <div className={`${styles.showBlok2} ${selectedOption === 'yes' ? styles.showBlokActive2 : ''}`}>
                 Відправте нам на почту або в телеграм всю інформацію (Бренд-бук, логотип та все що відносеться до дизайну). Контакти ви знайдете в кінці сторінки.
-              </div>
-            </div>
-              <h2 className={styles.infoH2}>Вкажіть сайти, які вам подобаються і ті, які вам не подобаються. Ця інформація стане гарним інструментом для створення дизайну</h2>
-            <div className={styles.inputs}>
-              <div className={styles.inputsblock}>
-                <label
-                    htmlFor='goals'
-                    className={styles.label}
-                  >
-                    Подобаються
-                </label>
-                    <input
-                      type='text'
-                      id='like'
-                      {...register('like')}
-                      autoComplete='like'
-                      placeholder='http://exampl.com.ua/'
-                      className={styles.input}
-                    />
-                    {errors.like?.message && (
-                      <p className={styles.errors}>
-                        {errors.like.message}
-                      </p>
-                    )}
-              </div>
-              <div className={styles.inputsblock}>
-                <label
-                    htmlFor='goals'
-                    className={styles.label}
-                  >
-                    Не подобаються
-                </label>
-                    <input
-                      type='text'
-                      id='notLike'
-                      {...register('notLike')}
-                      autoComplete='notLike'
-                      placeholder='http://exampl.com.ua/'
-                      className={styles.input}
-                    />
-                    {errors.notLike?.message && (
-                      <p className={styles.errors}>
-                        {errors.notLike.message}
-                      </p>
-                    )}
               </div>
             </div>
           </motion.div>

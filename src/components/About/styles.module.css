@@ -58,11 +58,11 @@
     transition: width 1.8s ease;
 }
 
-.info:hover .line {
+.about:hover .line {
     width: 1200px;
 }
 
-.info:hover .block5 {
+.about:hover .block5 {
     transform: scale(0.95);
     border: 1px solid #46c2a0;
     box-shadow: 0 0 2px #46c2a0;

@@ -7,12 +7,12 @@ function Header() {
         <div className={styles.header__wrapper}>
           <h1 className={styles.header__title}>
             <strong>
-                Hi, my name is <em>Reklamax</em>
+              Вас вітає рекламна агенція <em>Reklamax</em>
             </strong>
-            <br />a frontend developer
+            <br />Ми займаємося цифровізацією ваших ідей
           </h1>
           <div className={styles.header__text}>
-            <p>with passion for learning and creating.</p>
+            <p>Створимо проєкт разом.</p>
           </div>
         </div>
       </div>

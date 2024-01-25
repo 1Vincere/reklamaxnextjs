@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './styles.module.css'
-import CopyrightSvg from '../CopyrightSvg/CopyrightSvg';
-import InstaSvg from '../InstaSvg/InstaSvg';
-import TgSvg from '../TgSvg/TgSvg';
-import GmailSvg from '../GmailSvg/GmailSvg';
+import CopyrightSvg from '../Svg/CopyrightSvg/CopyrightSvg';
+import InstaSvg from '../Svg/InstaSvg/InstaSvg';
+import TgSvg from '../Svg/TgSvg/TgSvg';
+import GmailSvg from '../Svg/GmailSvg/GmailSvg';
 import Link from 'next/link';
 
 function Footer() {
