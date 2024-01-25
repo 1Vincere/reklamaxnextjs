@@ -33,7 +33,7 @@ function About() {
             Iusto fugiat omnis praesentium nesciunt facere aliquam ab iure, repudiandae distinctio dignissimos esse repellendus saepe deleniti molestias, quos eos. Quia.
             </p>
             <div className={styles.test}>
-                <Link href="/create" passHref legacyBehavior>
+                <Link href="/news" passHref legacyBehavior>
                 <a className={styles.btn}> Вперед! </a>
                 </Link>
             </div>
