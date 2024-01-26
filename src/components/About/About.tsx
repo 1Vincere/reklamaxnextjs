@@ -12,7 +12,7 @@ function About() {
                     <p className={styles.p}>Використайте анкету, яку ми створили для вас</p>
                 </div>
                 <div className={styles.block2}>
-                    <p className={styles.p}>Очікуйте на зв'язок для формування технічного завдання.</p>
+                    <p className={styles.p}>Очікуйте на зв`язок для формування технічного завдання.</p>
                 </div>
                 <div className={styles.block3}>
                     <p className={styles.p}>Реалізація проекту,редагування та правки.</p>

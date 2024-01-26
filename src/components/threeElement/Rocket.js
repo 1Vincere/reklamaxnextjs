@@ -6,20 +6,20 @@ import { Mesh } from 'three';
 
 export default function Rocket() {
   const gltf = useLoader(GLTFLoader, '/models/rocket/scene.gltf');
-
-  const handleScroll = () => {
-    const scrollY = window.scrollY;
-    gltf.scene.position.y = scrollY * -0.01;
-  };
+  const [rotationAngle, setRotationAngle] = useState(0);
 
   useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      gltf.scene.position.y = scrollY * -0.01;
+    };
+
     window.addEventListener('scroll', handleScroll);
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [handleScroll]); // Добавлен handleScroll в массив зависимостей
-
-  const [rotationAngle, setRotationAngle] = useState(0);
+  }, [gltf]);
 
   useFrame(() => {
     setRotationAngle((prevAngle) => prevAngle + 0.01);
