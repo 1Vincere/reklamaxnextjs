@@ -33,8 +33,8 @@ function About() {
                 рівень якості в усіх аспектах веброзробки. Відкрийте для себе високоякісні рішення для вашого бізнесу - створіть разом з нами дивовижний проєкт!
             </p>
             <div className={styles.test}>
-                <Link href="/news" passHref legacyBehavior>
-                <a className={styles.btn}>Вперед!</a>
+                <Link href="/create" passHref legacyBehavior>
+                    <a className={styles.btn}>Вперед!</a>
                 </Link>
             </div>
         </div>

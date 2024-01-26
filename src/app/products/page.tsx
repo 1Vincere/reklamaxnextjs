@@ -20,8 +20,6 @@ export default function ProductList() {
                     src={project.img}
                     alt={project.title}
                     className={styles.project__img}
-                    width={370}
-                    height={278}
                   />
                   <h3 className={styles.project__title}>{project.title}</h3>
               </Link>

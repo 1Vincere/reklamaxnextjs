@@ -1,13 +1,21 @@
 import Link from "next/link";
+import "../styles/globals.css"
+import ParticleAnimation from "@/components/particleAnimation/ParticleAnimation";
 
 export default function NotFound() {
   return (
-    <div>
-      <h2>Page not found</h2>
-      <p>Could not find requested resource</p>
-      <p>
-        <Link href="/">Home</Link>
-      </p>
-    </div>
+    <>
+      <ParticleAnimation/>
+      <div className='main'>
+        <div className='container'>
+          <div className="notFoundCo">
+            <div className="notFound" title="404">404</div>
+            <Link href="/" passHref legacyBehavior>
+              <a className="btn">Головна</a>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }

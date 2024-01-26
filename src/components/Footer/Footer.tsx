@@ -14,7 +14,7 @@ function Footer() {
                 <div className={styles.links}>
                     <Link href="/" className={styles.link}>Головна</Link>
                     <Link href="/products" className={styles.link}>Проекти</Link>
-                    <Link href="/news" className={styles.link}>Створити</Link>
+                    <Link href="/create" className={styles.link}>Створити</Link>
                 </div>
             </div>
             <div className={styles.flex2}>

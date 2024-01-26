@@ -21,7 +21,6 @@
 .header__title {
     margin-bottom: 20px;
     font-size: 28px;
-    font-weight: 700;
     line-height: 1.4;
     color: white;
     text-shadow: 0 0 2px #ffffff;
@@ -32,12 +31,11 @@
 }
   
 .header__title em {
-    font-family: 'PlayBold', sans-serif;
+    font-family: 'Play Bold', sans-serif;
     font-style: normal;
     color: #46c2a0;
     text-shadow: 0 0 2px #46c2a0;
     font-size: 60px;
-    font-weight: 700;
 }
   
 .header__text {

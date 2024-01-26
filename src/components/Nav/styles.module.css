@@ -13,6 +13,11 @@
     box-shadow: 0 0 2px #ffffff;
 }
 
+.logo {
+    width: 150px;
+    height: auto;
+}
+
 .navSvg {
     display: none;
 }

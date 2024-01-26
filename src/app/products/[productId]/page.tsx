@@ -40,14 +40,15 @@ export default function ProductDetails({ params }: Props) {
           <Nav />
           <div className={styles.proX}>
             <div className={styles.projectX}>
-              <Image src={project.imgBig} alt="error" className={styles.project__imgX} width={800} height={600} />
+              {/* <Image src={project.imgBig} alt="error" className={styles.project__imgX} width={800} height={600} /> */}
+              <iframe className={styles.project__imgX} src={project.link}></iframe>
               <div className={styles.project__titleHoldX}>
                 <h3 className={styles.project__titleX}>{project.title}</h3>
                 <p className={styles.skillsX}>{project.skills}</p>
                 <div className={styles.linksX}>
                   <Link href={project.gitHubLink} target="_blank" className={styles.linkX}>
                     <GitHubSvg/>
-                    <h2>gitHub репозиторій</h2>
+                    <h2>Репозиторій</h2>
                   </Link>
                   <Link href={project.link} target="_blank" className={styles.linkX}>
                     <LinkSvg/>
