@@ -1,5 +1,6 @@
 .nav {
     position: relative;
+    z-index: 4;
     background-color: #000000;
     width: 100%;
     height: 60px;
@@ -57,7 +58,7 @@
         position: absolute;
         top: 70px;
         left: 0px;
-        z-index: 5;
+        z-index: 3;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -66,10 +67,23 @@
         border: 1px solid #fff;
         box-shadow: 0 0 2px #ffffff;
         border-radius: 10px;
+        transform: translateY(-120%);
+        opacity: 0;
+        transition: all 0.2s;
+    }
+
+    .navLinksActive {
+        opacity: 1;
+        transform: translateY(0%);
     }
 
     .navSvg {
         display: block;
+        transition: all 0.2s;
+    }
+
+    .navSvgActive {
+        transform: rotate(180deg);
     }
     
     .navSvg svg {
@@ -77,13 +91,15 @@
         transition: all 0.2s;
     }
     
-    .navSvg svg:hover {
-        transform: rotate(180deg);
-    }
-    
     .navSvg svg:active {
         position: relative;
         top: 2px;
         stroke: #46c2a0 !important;
+    }
+
+    .nav a {
+        margin-right: 0px;
+        padding: 10px;
+        font-size: 36px;
     }
 }

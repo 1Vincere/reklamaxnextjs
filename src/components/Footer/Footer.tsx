@@ -1,16 +1,18 @@
 import React from 'react';
-import styles from './styles.module.css'
+import Link from 'next/link';
+import Image from 'next/image';
+import logoMini from '../../../public/img/Logo_reklamaxMini.png';
 import CopyrightSvg from '../Svg/CopyrightSvg/CopyrightSvg';
 import InstaSvg from '../Svg/InstaSvg/InstaSvg';
 import TgSvg from '../Svg/TgSvg/TgSvg';
 import GmailSvg from '../Svg/GmailSvg/GmailSvg';
-import Link from 'next/link';
+import styles from './styles.module.css'
 
 function Footer() {
     return (
         <footer className={styles.footer}>
             <div className={styles.flex}>
-                <div className={styles.gif}></div>
+                <Image src={logoMini} className={styles.gif} alt='error img'/>
                 <div className={styles.links}>
                     <Link href="/" className={styles.link}>Головна</Link>
                     <Link href="/products" className={styles.link}>Проекти</Link>

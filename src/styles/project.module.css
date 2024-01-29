@@ -118,3 +118,17 @@
 .skillsX {
   color: white;   
 }
+
+@media (max-width: 430px) {
+  .projectsHold {
+    flex-direction: column;
+  }
+  
+  .linksX {
+    display: block;
+  }
+
+  .projectX {
+    margin: 100px 0px;
+  }
+}

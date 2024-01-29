@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import ParticleAnimation from "@/components/particleAnimation/ParticleAnimation";
 import { projects } from "@/helpers/projectList";
-import Image from "next/image";
 import Footer from "@/components/Footer/Footer";
 import Nav from "@/components/Nav/Nav";
 import styles from "../../../styles/project.module.css";
@@ -40,7 +39,6 @@ export default function ProductDetails({ params }: Props) {
           <Nav />
           <div className={styles.proX}>
             <div className={styles.projectX}>
-              {/* <Image src={project.imgBig} alt="error" className={styles.project__imgX} width={800} height={600} /> */}
               <iframe className={styles.project__imgX} src={project.link}></iframe>
               <div className={styles.project__titleHoldX}>
                 <h3 className={styles.project__titleX}>{project.title}</h3>

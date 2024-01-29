@@ -50,6 +50,17 @@ body::-webkit-scrollbar-thumb:hover {
   overflow: hidden;
 }
 
+iframe {
+  overflow: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+
+iframe::-webkit-scrollbar {
+  display: none;
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -58,7 +69,7 @@ a {
 .main {
   width: 100%;
   position: relative;
-  z-index: 3;
+  z-index: 4;
 }
 
 .container {
