@@ -6,6 +6,7 @@ import three from '../../public/img/projects/Vosk.jpg';
 const projects = [
   {
     id: 1,
+    href: 'goldauto',
     title: 'Автосервіс "Gold Auto"',
     skills: 'HTML, CSS, JS, API, Three.js',
     img: one,
@@ -14,6 +15,7 @@ const projects = [
   },
   {
     id: 2,
+    href: 'created',
     title: 'Благодійний Фонд "Created"',
     skills: 'HTML, CSS, JS, API',
     img: two,
@@ -22,6 +24,7 @@ const projects = [
   },
   {
     id: 3,
+    href: 'voskresensky',
     title: 'Ресторан "Воскресенский"',
     skills: 'React',
     img: three,
