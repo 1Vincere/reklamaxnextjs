@@ -1,5 +1,6 @@
 import { Metadata } from "next";
-import "../styles/globals.css"
+import Head from "next/head";
+import "../styles/globals.css";
 
 export const metadata: Metadata = {
   title: "Reklamax",
@@ -13,6 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ua">
+      <Head>
+        <meta name="google-site-verification" content="eodzFSWKScKCjRE73LMdVNLMm0VRiYF5tvTgWLviW-g" />
+      </Head>
       <body>
         {children}
       </body>
