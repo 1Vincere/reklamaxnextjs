@@ -50,9 +50,9 @@ body::-webkit-scrollbar-thumb:hover {
   overflow: hidden;
 }
 
-/* iframe {
+iframe {
   pointer-events: none;
-} */
+}
 
 iframe::-webkit-scrollbar {
   display: none;

@@ -1,5 +1,5 @@
 import one from '../../public/img/projects/Gold.jpg';
-import two from '../../public/img/projects/Created.jpg';
+import two from '../../public/img/projects/test1.png';
 import three from '../../public/img/projects/Vosk.jpg';
 
 
