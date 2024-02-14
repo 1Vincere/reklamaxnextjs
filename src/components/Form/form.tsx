@@ -12,17 +12,17 @@ type Inputs = z.infer<typeof FormDataSchema>
 
 const steps = [
   {
-    id: 'Персональна інформація',
+    id: 'Інформація',
     name: 'Step 0',
     fields: ['firstName', 'namber', 'email']
   },
   {
-    id: 'Про компанію',
+    id: 'Компанія',
     name: 'Step 1',
     fields: ['lastName', 'products', 'activity']
   },
   { 
-    id: 'Загальні вимоги',
+    id: 'Вимоги',
     name: 'Step 2',
     fields: ['goals', 'tasks']
   },
@@ -32,7 +32,7 @@ const steps = [
     fields: ['answer', 'color', 'fonts', 'mood', 'notLike', 'like']
   },
   { 
-    id: 'Карта сайту',
+    id: 'Карта',
     name: 'Step 4',
     fields: ['structure', 'functionality']
   },
