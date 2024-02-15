@@ -13,6 +13,8 @@ export default function ProductList() {
       <div className="main">
         <div className="container">
           <Nav />
+          
+          <div className={styles.test}>TEST</div>
           <div className={styles.projectsHold}>
             {projects.map((project) => (
               <Link key={project.id} href={`/products/${project.id}`} className={styles.project}>

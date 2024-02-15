@@ -60,10 +60,16 @@ export default function Form() {
     resolver: zodResolver(FormDataSchema)
   })
 
-  const processForm: SubmitHandler<Inputs> = data => {
-    console.log(data)
-    // reset()
-  }
+  const processForm: SubmitHandler<Inputs> = async (data) => {
+    console.log(data);
+  
+    try {
+      await sendFormData(data);
+    } catch (error) {
+      console.error('Error sending form data:', error);
+      // Обработка ошибки отправки данных формы
+    }
+  };
 
   type FieldName = keyof Inputs
 
@@ -95,8 +101,29 @@ export default function Form() {
     setSelectedOption(value);
   };
 
+  const sendFormData = async (data: Inputs) => {
+    try {
+      const response = await fetch('/api/sendMail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+      if (response.ok) {
+        console.log('Email sent successfully!');
+      } else {
+        console.error('Failed to send email');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+    }
+  };
+
+
   return (
     <section className={styles.section}>
+      <div className={styles.test}>TEST</div>
       {/* steps */}
       <nav aria-label='Progress' className={styles.nav}>
         <ol role='list' className={styles.ol}>
@@ -462,26 +489,28 @@ export default function Form() {
                         id='yesRadio'
                         value="yes"
                         {...register('answer')}
-                        className={`${styles.inputradio} ${selectedOption === 'yes' ? styles.inputradioActive : ''}`}
+                        className={styles.inputradio}
+                        onChange={() => handleRadioChange('yes')}
                         onClick={() => handleRadioChange('yes')}
+                        onTouchStart={() => handleRadioChange('yes')}
                         autoComplete='yesRadio'
                       />
                       <label htmlFor="yesRadio" className={styles.radiolabel}>Так</label>
-                      </div>
+                    </div>
                     <div className={styles.radioflex}>
                       <input
                         type='radio'
                         id='noRadio'
                         value="no"
                         {...register('answer')}
-                        className={`${styles.inputradio} ${selectedOption === 'no' ? styles.inputradioActive : ''}`}
+                        className={styles.inputradio}
                         onChange={() => handleRadioChange('no')}
                         onClick={() => handleRadioChange('no')}
                         onTouchStart={() => handleRadioChange('no')}
                         autoComplete='noRadio'
                       />
                       <label htmlFor="noRadio" className={styles.radiolabel}>Ні</label>
-                      </div>
+                    </div>
                   </div>
                       {errors.answer?.message && (
                         <p className={styles.errors}>
@@ -570,7 +599,6 @@ export default function Form() {
                   >
                     Cтруктура
                 </label>
-                  <div className={styles.margin}>
                     <input
                       type='text'
                       id='structure'
@@ -584,7 +612,6 @@ export default function Form() {
                         {errors.structure.message}
                       </p>
                     )}
-                  </div>
               </div>
               <div className={styles.inputsblock}>
                 <label
@@ -593,7 +620,6 @@ export default function Form() {
                   >
                     Функціональність
                 </label>
-                  <div className={styles.margin}>
                     <input
                       type='text'
                       id='functionality'
@@ -607,7 +633,6 @@ export default function Form() {
                         {errors.functionality.message}
                       </p>
                     )}
-                  </div>
               </div>
             </div>
           </motion.div>
@@ -681,4 +706,4 @@ export default function Form() {
       </div>
     </section>
   )
-}          
+}

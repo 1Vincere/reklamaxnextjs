@@ -1,6 +1,6 @@
-import one from '../../public/img/projects/Gold.jpg';
-import two from '../../public/img/projects/test1.png';
-import three from '../../public/img/projects/Vosk.jpg';
+import one from '../../public/img/projects/gold350.jpg';
+import two from '../../public/img/projects/crea350.jpg';
+import three from '../../public/img/projects/vosk350.jpg';
 
 
 const projects = [

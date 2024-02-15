@@ -6,6 +6,7 @@ import Form from '@/components/Form/form';
 import Head from 'next/head';
 
 function News () {
+
   return (
     <>
       <Head>

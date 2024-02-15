@@ -69,9 +69,14 @@
     box-shadow: 0 0 2px #46c2a0;
 }
 
+.about:hover .pActive {
+    color: #46c2a0;
+}
+
 .p {
     color: white;
     padding: 10px;
+    transition-delay: 1s;
 }
 
 /* Btn */
@@ -132,7 +137,8 @@
         box-shadow: 0 0 2px #46c2a0;
         position: absolute;
         top: 30px;
-        left: 210px;
+        left: 50%;
+        transform: translateX(-50%);
         z-index: -1;
         transition: height 1.8s ease;
     }

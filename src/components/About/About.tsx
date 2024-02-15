@@ -21,7 +21,7 @@ function About() {
                     <p className={styles.p}>Просування за допомогою SEO та реклами</p>
                 </div>
                 <div className={styles.block5}>
-                    <p className={styles.p}>Результат, що перевершить ваші очікування!</p>
+                    <p className={`${styles.p} ${styles.pActive}`}>Результат, що перевершить ваші очікування!</p>
                 </div>
                 <div className={styles.line}></div>
             </div>
